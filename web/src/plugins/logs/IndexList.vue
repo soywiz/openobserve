@@ -139,11 +139,11 @@
                 switch-toggle-side
                 :label="props.row.name"
                 expand-icon-class="field-expansion-icon"
-                :expand-icon="
-                  'img:' + getImageURL('images/common/down-solid.svg')
+                expand-icon="
+                  expand_more
                 "
-                :expanded-icon="
-                  'img:' + getImageURL('images/common/up-solid.svg')
+                expanded-icon="
+                  expand_less
                 "
                 @before-show="(event: any) => openFilterCreator(event, props.row)"
               >
@@ -656,7 +656,6 @@ export default defineComponent({
       right: 0;
       top: 0;
       z-index: 5;
-      background-color: #e8e8e8;
       padding: 0 6px;
       visibility: hidden;
       display: flex;
@@ -688,7 +687,6 @@ export default defineComponent({
 }
 
 .q-item {
-  color: $dark-page;
   min-height: 1.3rem;
   padding: 5px 10px;
 
