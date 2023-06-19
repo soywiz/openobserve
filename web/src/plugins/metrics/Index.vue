@@ -804,7 +804,6 @@ div.plotly-notifier {
     .date-time-button {
       height: 100%;
       padding: 0 8px;
-      background-color: #ffffff !important;
     }
   }
 }
