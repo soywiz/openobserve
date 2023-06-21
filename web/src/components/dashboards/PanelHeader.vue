@@ -15,7 +15,7 @@
 
 <template>
   <div>
-    <q-bar class="bg-white">
+    <q-bar class="">
     <q-icon v-if="draggable" name="drag_indicator" />
       <div class="">
         {{ renderTitle }}
