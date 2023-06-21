@@ -680,6 +680,7 @@ export default defineComponent({
 
     &:hover {
       .field-container {
+        // background-color: #ffffff;
       }
     }
   }
@@ -700,7 +701,7 @@ export default defineComponent({
 
   &.q-manual-focusable--focused > .q-focus-helper,
   &--active {
-    background-color: $selected-list-bg !important;
+    // background-color: $selected-list-bg !important;
   }
 
   &.q-manual-focusable--focused > .q-focus-helper,
@@ -732,7 +733,7 @@ export default defineComponent({
 }
 </style>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .index-table {
   .q-table {
     width: 100%;
@@ -802,7 +803,7 @@ export default defineComponent({
         }
 
         .field_overlay {
-          background-color: #ffffff;
+          // background-color: #ffffff;
         }
       }
     }

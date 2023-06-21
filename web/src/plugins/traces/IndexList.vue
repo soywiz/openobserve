@@ -598,7 +598,7 @@ export default defineComponent({
         }
 
         .field_overlay {
-          background-color: #ffffff;
+          // background-color: #ffffff;
         }
       }
     }

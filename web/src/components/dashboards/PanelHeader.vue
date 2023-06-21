@@ -15,7 +15,7 @@
 
 <template>
   <div>
-    <q-bar class="">
+    <q-bar :class="store.state.theme == 'dark' ? 'dark-mode' : 'bg-white'">
     <q-icon v-if="draggable" name="drag_indicator" />
       <div class="">
         {{ renderTitle }}
@@ -48,6 +48,8 @@
 import { computed, defineComponent } from "vue";
 import { toRaw } from 'vue';
 import { useRouter } from "vue-router";
+import { useStore } from "vuex";
+import { useQuasar} from "quasar";
 
 export default defineComponent({
   name: "PanelHeader",
@@ -55,6 +57,8 @@ export default defineComponent({
   panelData: [],
 
   setup(props, { emit }) {
+    const $q = useQuasar();
+    const store = useStore();
     const panelDataElementObject = toRaw(props.panelDataElement)
     const dashboardId = props.dashboardId
     const router = useRouter();
@@ -83,7 +87,8 @@ export default defineComponent({
       dashboardId,
       addNewPanel,
       deletePanel,
-      renderTitle
+      renderTitle,
+      store
     };
   }, methods: {
 
