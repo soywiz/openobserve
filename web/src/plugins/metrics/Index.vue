@@ -230,7 +230,7 @@ export default defineComponent({
         timeout: 10000,
         actions: [
           {
-            icon: "close",
+            icon: "cancel",
             color: "white",
             handler: () => {
               /* ... */
@@ -247,7 +247,7 @@ export default defineComponent({
         timeout: 10000,
         actions: [
           {
-            icon: "close",
+            icon: "cancel",
             color: "white",
             handler: () => {
               /* ... */
