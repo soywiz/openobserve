@@ -527,7 +527,7 @@ export default defineComponent({
 }
 
 .droppable {
-  border-color: rgba(0, 0, 0, 0.042);
+  border-color: transparent;
   border-style: dashed;
   border-width: 2px;
 }
