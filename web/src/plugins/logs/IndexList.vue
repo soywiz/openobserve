@@ -97,7 +97,7 @@
                 </div>
                 <div class="field_overlay">
                   <q-icon
-                    :name="'img:' + getImageURL('images/common/add_icon.svg')"
+                    name="add_circle"
                     :data-test="`log-search-index-list-filter-${props.row.name}-field-btn`"
                     style="margin-right: 0.375rem"
                     size="1rem"
@@ -110,8 +110,8 @@
                         props.row.name
                       )
                     "
-                    :name="
-                      'img:' + getImageURL('images/common/visibility_on.svg')
+                    name="
+                      visibility
                     "
                     size="1.1rem"
                     title="Add field to table"
@@ -124,9 +124,7 @@
                         props.row.name
                       )
                     "
-                    :name="
-                      'img:' + getImageURL('images/common/visibility_off.svg')
-                    "
+                    name="visibility_off"
                     size="1.1rem"
                     title="Remove field from table"
                     @click.stop="clickFieldFn(props.row, props.pageIndex)"
@@ -158,9 +156,7 @@
                     <div class="field_overlay">
                       <q-icon
                         :data-test="`log-search-index-list-filter-${props.row.name}-field-btn`"
-                        :name="
-                          'img:' + getImageURL('images/common/add_icon.svg')
-                        "
+                        name="add_circle"
                         style="margin-right: 0.375rem"
                         size="1rem"
                         @click.stop="addToFilter(props.row.name)"
@@ -172,10 +168,7 @@
                             props.row.name
                           )
                         "
-                        :name="
-                          'img:' +
-                          getImageURL('images/common/visibility_on.svg')
-                        "
+                        name="visibility"
                         size="1.1rem"
                         title="Add field to table"
                         @click.stop="clickFieldFn(props.row, props.pageIndex)"
@@ -187,10 +180,7 @@
                             props.row.name
                           )
                         "
-                        :name="
-                          'img:' +
-                          getImageURL('images/common/visibility_off.svg')
-                        "
+                        name="visibility_off"
                         title="Remove field from table"
                         size="1.1rem"
                         @click.stop="clickFieldFn(props.row, props.pageIndex)"
