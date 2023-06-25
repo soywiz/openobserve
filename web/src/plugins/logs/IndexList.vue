@@ -97,7 +97,7 @@
                 </div>
                 <div class="field_overlay">
                   <q-icon
-                    name="add_circle"
+                    :name="outlinedAdd"
                     :data-test="`log-search-index-list-filter-${props.row.name}-field-btn`"
                     style="margin-right: 0.375rem"
                     size="1rem"
@@ -110,8 +110,8 @@
                         props.row.name
                       )
                     "
-                    name="
-                      visibility
+                    :name="
+                      outlinedVisibility
                     "
                     size="1.1rem"
                     title="Add field to table"
@@ -124,7 +124,7 @@
                         props.row.name
                       )
                     "
-                    name="visibility_off"
+                    :name="outlinedVisibilityOff"
                     size="1.1rem"
                     title="Remove field from table"
                     @click.stop="clickFieldFn(props.row, props.pageIndex)"
@@ -156,7 +156,7 @@
                     <div class="field_overlay">
                       <q-icon
                         :data-test="`log-search-index-list-filter-${props.row.name}-field-btn`"
-                        name="add_circle"
+                        :name="outlinedAdd"
                         style="margin-right: 0.375rem"
                         size="1rem"
                         @click.stop="addToFilter(props.row.name)"
@@ -168,7 +168,7 @@
                             props.row.name
                           )
                         "
-                        name="visibility"
+                        :name="outlinedVisibility"
                         size="1.1rem"
                         title="Add field to table"
                         @click.stop="clickFieldFn(props.row, props.pageIndex)"
@@ -180,7 +180,7 @@
                             props.row.name
                           )
                         "
-                        name="visibility_off"
+                        :name="outlinedVisibilityOff"
                         title="Remove field from table"
                         size="1.1rem"
                         @click.stop="clickFieldFn(props.row, props.pageIndex)"
@@ -316,6 +316,9 @@ import {
 import streamService from "../../services/stream";
 import { getConsumableDateTime } from "@/utils/commons";
 import { Parser } from "node-sql-parser";
+import { outlinedAdd } from '@quasar/extras/material-icons-outlined'
+import { outlinedVisibility } from '@quasar/extras/material-icons-outlined'
+import { outlinedVisibilityOff } from '@quasar/extras/material-icons-outlined'
 
 interface Filter {
   fieldName: string;
@@ -543,6 +546,9 @@ export default defineComponent({
       addSearchTerm,
       fieldValues,
       streamTypes,
+      outlinedAdd,
+      outlinedVisibilityOff,
+      outlinedVisibility,
     };
   },
 });
